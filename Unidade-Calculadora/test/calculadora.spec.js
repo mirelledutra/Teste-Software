@@ -8,6 +8,13 @@ describe('Testes de calculadora com valores inteiro ', () => {
         const retornado = soma(10,20);
         expect(retornado).toBe(esperado);
     });
+    
+    it('Deve retornar a subtração de dois valores inteiros', () =>{
+        const esperado = 30;
+        const retornado = subtracao(40,10);
+        expect(retornado).toBe(esperado);
+    });
+
 
 
 });
@@ -26,6 +33,25 @@ describe('Testes de calculadora com valores negativos ', () => {
         const retornado = soma(-10,-15);
         expect(retornado).toBe(esperado);
     });
+});
 
+
+
+describe('Testes de calculadora com valores flutuante ', () => {
+    it('Deve retornar a subtração de dois valores flutuante', () => {
+        const esperado = 5;
+        const retornado = subtracao(15.5,10.5);
+        expect(retornado).toBeCloseTo(esperado);
+    });
 
 });
+
+
+describe('Testes de calculadora com valores negativos ', () => {
+    it('Deve retornar a subtração de dois valores negativos', () => {
+        const esperado = 5;
+        const retornado = subtracao(-10,-15);
+        expect(retornado).toBe(esperado);
+    });
+});
+
